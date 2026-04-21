@@ -173,7 +173,7 @@ int main() {
     char choice;
 
     do {
-        std::cout << "\n-×- STUDENT ROSTER MAIN MENU -×-\n";
+        std::cout << "\n-x- STUDENT ROSTER MAIN MENU -x-\n";
         std::cout << "[C]reate Record\n[R]ead All\n[U]pdate Record\n[D]elete Record\n[E]xit\nChoice: ";
 
         std::cin >> std::ws >> choice;
