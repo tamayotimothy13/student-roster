@@ -31,8 +31,8 @@ if (start == std::string::npos) {
 } else {
     name = name.substr(start, end - start + 1);
 }
-    if (name.length() > 20) {
-        name = name.substr(0, 20);
+    if (name.length() > 25) {
+        name = name.substr(0, 25);
     }
     
     bool newWord = true;
@@ -120,7 +120,7 @@ void readRecords() {
     std::cout << std::string(58, '-') << "\n";
 
     for (const auto& s : roster) {
-        std::cout << std::setw(5) << s.id << std::setw(25) << s.name << std::setw(10) << std::fixed << std::setprecision(2) << s.gwa << std::setw(15) << (isDeanList(s.gwa) ? "Eligible" : "Ineligible") << "\n";
+        std::cout << std::setw(5) << s.id << std::setw(25) << s.name << std::setw(10) << std::fixed << std::setprecision(2) << s.gwa << std::setw(18) << (isDeanList(s.gwa) ? "Eligible" : "Ineligible") << "\n";
     }
 }
 
@@ -178,6 +178,7 @@ int main() {
 
         std::cin >> std::ws >> choice;
         choice = toupper(choice);
+        clearInput();
         switch (choice) {
             case 'C': createRecord(); break;
             case 'R': readRecords(); break;
